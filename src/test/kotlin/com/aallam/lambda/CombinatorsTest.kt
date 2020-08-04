@@ -36,4 +36,19 @@ class CombinatorsTest {
     fun bluebird_B() {
         assertEquals(TRUE, B(NOT)(NOT)(TRUE))
     }
+
+    @Test
+    fun thrush_Th() {
+        assertEquals(TRUE, Th(FALSE)(NOT))
+    }
+
+    @Test
+    fun vireo_V() {
+        assertEquals(I, V(I)(M)(K))
+    }
+
+    @Test
+    fun blackbird_B1() {
+        assertEquals(TRUE, B1(I)(K)(TRUE)(FALSE))
+    }
 }
