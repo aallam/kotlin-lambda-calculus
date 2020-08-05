@@ -14,7 +14,7 @@ val SUCC = λ { n -> λ { f -> λ { a -> f(n(f)(a)) } } }
  * λ-Calculus: λn.FST(n Φ (PAIR N0 N0))
  *          or λn.n (𝜆g.IS0 (g N1) I (B SUCC g)) (K N0) N0
  */
-val PRED = λ { n -> FST(n(PHI)(PAIR(ZERO)(ZERO))) }
+val PRED = λ { n -> FST(n(Φ)(PAIR(ZERO)(ZERO))) }
 
 /**
  * λ-Calculus: λnfk.B(nf)(kf) or λnk.n SUCC k

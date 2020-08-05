@@ -10,7 +10,7 @@ package com.aallam.lambda
 val I = λ { a -> a }
 
 /**
- * Sym. Bird: M/Mockingbird
+ * Sym. Bird: M/Mockingbird (ω)
  * λ-Calculus: λf.ff
  * Use: self-application
  */
@@ -64,3 +64,24 @@ val V = λ { a -> λ { b -> λ { f -> f(a)(b) } } }
  * Use: 1°<-2° composition
  */
 val B1 = λ { f -> λ { g -> λ { a -> λ { b -> f(g(a)(b)) } } } }
+
+/**
+ * Sym. Bird: S/Starling
+ * λ-Calculus: λabc.ac(bc)
+ * Use: Substitution or replication
+ */
+val S = λ { a -> λ { b -> λ { c -> a(c)(b(c)) } } }
+
+/**
+ * Sym. Bird: Y/Why Bird (aka Sage Bird)
+ * λ-Calculus: λf.M(𝜆x.f(Mx))
+ * Use: A fixed-point combinator
+ */
+val Y = λ { f -> M(λ { x -> f(M(x)) }) }
+
+/**
+ * Sym. Bird: Z/
+ * λ-Calculus: λf.M(𝜆x.f(𝜆v.Mxv))
+ * Use: A fixed-point combinator (strict)
+ */
+val Z = λ { f -> M(λ { x -> f(λ { v -> M(x)(v) }) }) }

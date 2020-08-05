@@ -6,7 +6,7 @@ package com.aallam.lambda
  * Lambda definition.
  */
 interface λ {
-    infix operator fun invoke(value: λ): λ
+    operator fun invoke(value: λ): λ
 }
 
 /**

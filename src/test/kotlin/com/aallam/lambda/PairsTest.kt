@@ -24,8 +24,22 @@ class PairsTest {
 
     @Test
     fun phi() {
-        val phi = PHI(PAIR(ZERO)(ZERO))
+        val phi = Φ(PAIR(ZERO)(ZERO))
         assertEquals(ZERO, FST(phi)) // ZERO
         assertEquals(FALSE, SND(phi)(NOT)(TRUE)) // ONCE
+    }
+
+    @Test
+    fun set1st() {
+        val pair = PAIR(ONCE)(ONCE)
+        val set1st = SET1ST(ZERO)(pair)
+        assertEquals(ZERO, FST(set1st))
+    }
+
+    @Test
+    fun set2st() {
+        val pair = PAIR(ONCE)(ONCE)
+        val set2nd = SET2ND(ZERO)(pair)
+        assertEquals(ZERO, SND(set2nd))
     }
 }
